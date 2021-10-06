@@ -30,13 +30,13 @@ class UserTestCase(TestCase):
 
     def test_create_project(self):
         user = self.user
-        self.assertTrue(isinstance(self.user))
+        self.assertTrue(isinstance(self.user , User))
         self.assertEqual(self.project.project_name,"Irene Nyatichi")
         self.assertEqual(self.project.project_description,"This project is based on the assessment given.")
 
 
     def test_simulation(self):
         project = self.project
-        self.assertTrue(isinstance(self.project))
+        self.assertTrue(isinstance(self.project and self.user , User))
         self.assertEqual(self.simulation.simulation_name, "First Simulation")
         self.assertEqual(self.simulation.date, "2021-10-05")
