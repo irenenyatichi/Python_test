@@ -12,12 +12,13 @@ class UserTestCase(TestCase):
             password = "dghkj100",
         )
         self.project = Project.objects.create(
-            user=self.user,
+            # user=User(email = "irenenyatichik@gmail.com",password = "dghkj100"),
             project_name = "Irene Nyatichi",
             project_description = "This project is based on the assessment given.",
         )
         self.simulation = Simulation.objects.create(
-            project=self.project,
+            # user=User(email = "irenenyatichik@gmail.com",password = "dghkj100"),
+            # project=Project(project_name = "Irene Nyatichi",project_description = "This project is based on the assessment given."),
             simulation_name = "First Simulation",
             date = "2021-10-05",
         )
